@@ -290,6 +290,19 @@
                     </a></li>
                 </ul>
             </div>
+            <div class="footer-subscribe">
+                <p class="footer-subscribe-text">Подпишитесь на рассылку</p>
+                <form name="subscribe-form">
+                    <label for="subscribe-email" class="subscribe-label"></label>
+                    <input type="email" name="subscribe-email" id="subscribe-email" placeholder="Email" class="subscribe-input">
+                    <button class="subscribe-btn" type="submit">
+                        <span class="subscribe-text">Подписаться</span>
+                        <svg class="subscribe-icon" width="24" height="24">
+                            <use href="./images/icons.svg#icon-send"></use>
+                        </svg>
+                    </button>                  
+                </form>
+            </div>
         </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
@@ -299,6 +312,30 @@
                     <use href="./images/icons.svg#icon-close-black"></use>
                 </svg>
             </button>
+            <form class="form">
+                <p class="form-title">Оставьте свои данные, мы вам перезвоним</p>
+                <div class="form-field">
+                    <label class="form-label" for="name">Имя</label>
+                    <input class="form-input" type="text" name="name" id="name">
+                </div>
+                <div class="form-field">
+                    <label class="form-label" for="tel">Телефон</label>
+                    <input class="form-input" type="tel" name="tel" id="tel">
+                </div>
+                <div class="form-field">
+                    <label class="form-label" for="mail">Почта</label>
+                    <input class="form-input" type="email" name="email" id="mail">
+                </div>
+                <div class="form-field">
+                    <label class="form-label" for="comment">Комментарий</label>
+                    <textarea class="form-input" name="comment" rows="5" placeholder="Введите текст" id="comment"></textarea>
+                </div>
+                <div>
+                    <input type="checkbox" name="checkbox" value="check" id="check" checked>
+                    <label for="check">Соглашаюсь с рассылкой и принимаю Условия договора</label>
+                </div>
+                <button type="submit" class="main-button">Отправить</button>
+            </form>
         </div>
     </div>
     <script src="./js/modal.js"></script>
