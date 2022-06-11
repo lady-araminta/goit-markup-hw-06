@@ -730,6 +730,7 @@ body {
   color: var(--title-text-color);
 }
 .form-field {
+  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -740,9 +741,20 @@ body {
   margin-bottom: 20px;
 }
 .form-input {
-  padding: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 42px;
+  padding-right: 12px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  cursor: pointer;
+  resize: none;
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-input:last-child {
+  padding-left: 12px;
 }
 .form-input::placeholder {
   font-size: 12px;
@@ -750,9 +762,63 @@ body {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
+.form-input:hover,
+.form-input:focus {
+  outline: none;
+  border: 1px solid var(--accent-color);
+}
+.form-icon {
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-input:hover + .form-icon,
+.form-input:focus + .form-icon {
+  fill: var(--accent-color);
+}
 .form-label {
   margin-bottom: 4px;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
+}
+.form-icon {
+  position: absolute;
+  display: inline-block;
+  top: 29px;
+  left: 12px;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.check-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.check-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  border: 2px solid var(--black-color);
+  border-radius: 2px;
+}
+.checkbox:checked + .check-icon {
+  border-color: transparent;
+  background-color: var(--accent-color);
+  background-image: url(../images/check.svg);
+  background-size: contain;
+  background-origin: border-box;
+  background-position: center;
+}
+.check-link {
+  text-decoration: underline;
+  color: var(--accent-color);
+}
+.check-text {
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--primary-text-color);
+  margin-right: 2px;
 }

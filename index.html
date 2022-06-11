@@ -312,28 +312,39 @@
                     <use href="./images/icons.svg#icon-close-black"></use>
                 </svg>
             </button>
-            <form class="form">
+            <form class="form" autocomplete="off">
                 <p class="form-title">Оставьте свои данные, мы вам перезвоним</p>
                 <div class="form-field">
                     <label class="form-label" for="name">Имя</label>
                     <input class="form-input" type="text" name="name" id="name">
+                    <svg class="form-icon" width="18" height="18">
+                        <use href="./images/icons.svg#icon-person"></use>
+                    </svg>
                 </div>
                 <div class="form-field">
                     <label class="form-label" for="tel">Телефон</label>
                     <input class="form-input" type="tel" name="tel" id="tel">
+                    <svg class="form-icon" width="18" height="18">
+                        <use href="./images/icons.svg#icon-phone"></use>
+                    </svg>
                 </div>
                 <div class="form-field">
                     <label class="form-label" for="mail">Почта</label>
                     <input class="form-input" type="email" name="email" id="mail">
+                    <svg class="form-icon" width="18" height="18">
+                        <use href="./images/icons.svg#icon-email"></use>
+                    </svg>
                 </div>
                 <div class="form-field">
                     <label class="form-label" for="comment">Комментарий</label>
-                    <textarea class="form-input" name="comment" rows="5" placeholder="Введите текст" id="comment"></textarea>
+                    <textarea class="form-input" name="comment" rows="6" placeholder="Введите текст" id="comment"></textarea>
                 </div>
-                <div>
-                    <input type="checkbox" name="checkbox" value="check" id="check" checked>
-                    <label for="check">Соглашаюсь с рассылкой и принимаю Условия договора</label>
-                </div>
+                <label class="check-label">
+                    <input class="checkbox visually-hidden" type="checkbox" name="check" value="Соглашаюсь с рассылкой">
+                    <span class="check-icon"></span>
+                    <span class="check-text">Соглашаюсь с рассылкой и принимаю</span>
+                    <a href="" class="check-link">Условия договора</a>
+                </label>
                 <button type="submit" class="main-button">Отправить</button>
             </form>
         </div>
